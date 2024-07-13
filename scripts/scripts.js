@@ -296,6 +296,11 @@ document.addEventListener(
         element_contest_select.dispatchEvent(new Event("change"));
         element_contest_stage_select.value = contestStage;
         element_contest_stage_select.dispatchEvent(new Event("change"));
+        document.getElementById("status-vocal").value = "";
+        document.getElementById("status-dance").value = "";
+        document.getElementById("status-visual").value = "";
+        document.getElementById("status-hp").value = "";
+        document.getElementById("status-vocal").focus();
       }
       if (pIdol) {
         const [mainIdolId, subIdolId] = pIdol.split(":");
@@ -319,12 +324,17 @@ document.addEventListener(
       }
       if (cards) {
         const cardIds = cards.split("_").map((l) => l.split(":"));
-        element_main_cards
-          .slice(1)
-          .forEach((elem, idx) => (elem.value = cardIds[0][idx]));
-        element_sub_cards
-          .slice(1)
-          .forEach((elem, idx) => (elem.value = cardIds[1][idx]));
+        console.log(cardIds);
+        element_main_cards.forEach((elem, idx) => {
+          elem.value = 2 * Math.floor(cardIds[0][idx] / 2);
+          elem.parentNode.getElementsByClassName("checkbox")[0].checked =
+            cardIds[0][idx] % 2;
+        });
+        element_sub_cards.forEach((elem, idx) => {
+          elem.value = 2 * Math.floor(cardIds[1][idx] / 2);
+          elem.parentNode.getElementsByClassName("checkbox")[0].checked =
+            cardIds[1][idx] % 2;
+        });
       }
     }
 
@@ -343,7 +353,8 @@ document.addEventListener(
     const element_run_button = document.getElementById("run-button");
     element_run_button.addEventListener(
       "click",
-      () => {
+      (e) => {
+        e.preventDefault();
         if (run_flag) {
           alert("実行中です。");
           return;

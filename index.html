@@ -12,7 +12,7 @@
     <script type="module" src="./scripts/scripts.js"></script>
 </head>
 <body>
-    <div class="container">
+    <form class="container">
         <div class="section">
             <label>コンテスト</label>
             <div class="input-group">
@@ -39,10 +39,10 @@
         <div class="section">
             <label>ステータス（倍率%）</label>
             <div class="input-group">
-                <input type="text" id="status-vocal" inputmode="numeric" pattern="\d*" placeholder="Vocal%"  required="required" value="1000">
-                <input type="text" id="status-dance" inputmode="numeric" pattern="\d*" placeholder="Dance%"  required="required" value="1000">
-                <input type="text" id="status-visual" inputmode="numeric" pattern="\d*" placeholder="Visual%"  required="required" value="1000">
-                <input type="text" id="status-hp" inputmode="numeric" pattern="\d*" placeholder="体力"  required="required" value="30">
+                <input type="text" id="status-vocal" inputmode="numeric" pattern="\d*" placeholder="Vocal%"  required value="1000">
+                <input type="text" id="status-dance" inputmode="numeric" pattern="\d*" placeholder="Dance%"  required value="1000">
+                <input type="text" id="status-visual" inputmode="numeric" pattern="\d*" placeholder="Visual%"  required value="1000">
+                <input type="text" id="status-hp" inputmode="numeric" pattern="\d*" placeholder="体力"  required value="30">
             </div>
         </div>
         <div class="section card-select-box">
@@ -69,9 +69,9 @@
             </div>
         </div>
         <div class="run-button">
-            <input id="run-button" type="button" value="実行">
+            <input id="run-button" type="submit" value="実行">
         </div>
-    </div>
+    </form>
     <div class="container">
         <!--<div id="contest-score">スコア：0</div>-->
         <table class="result-table">

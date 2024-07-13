@@ -33,7 +33,7 @@ body {
     margin-bottom: 0px;
 }
 .section input[type="text"],
-.section.character-select-box select, 
+.section.character-select-box select,
 .section .input-group select {
     width: 100%;
     padding: 8px;
@@ -103,7 +103,7 @@ body {
 }
 .card-container-item[data-rarity="4"] {
     /* background-color: #fcf; */
-    /* background : linear-gradient(118deg, 
+    /* background : linear-gradient(118deg,
                                red,
                                orange,
                                yellow,
@@ -111,7 +111,7 @@ body {
                                aqua,
                                blue,
                                purple); */
-    
+
     /* background: linear-gradient(to right, #ffffb2, #ffffb2, #ffffb2, #d8ffb2, #b2ffb2, #b2ffd8, #b2ffff, #b2d8ff, #b2b2ff, #d8b2ff, #ffb2ff, #ffb2d8); */
 }
 
@@ -176,7 +176,7 @@ body {
     background-color: #f60;
 }
 
-/* 
+/*
 <div class="item">
     <input type="checkbox" id="checkbox" class="checkbox">
     <label for="checkbox" class="checkbox-label"></label>
@@ -203,7 +203,7 @@ body {
 .run-button {
     text-align: center;
 }
-.run-button input[type="button"] {
+.run-button input[type="submit"] {
     width: 100%;
     padding: 15px;
     background-color: #28a745;
@@ -212,7 +212,7 @@ body {
     border-radius: 4px;
     cursor: pointer;
 }
-.run-button input[type="button"]:hover {
+.run-button input[type="submit"]:hover {
     background-color: #218838;
 }
 
